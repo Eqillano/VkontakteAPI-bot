@@ -1,0 +1,11 @@
+отправляем сообщение
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+ошибка в обработке события
+Traceback (most recent call last):
+  File "bot.py", line 31, in run
+    self.on_event(event)
+  File "bot.py", line 45, in on_event
+    raise ValueError('неизвестное сообщние')
+ValueError: неизвестное сообщние
+отправляем сообщение
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
