@@ -66,3 +66,8 @@ SCENARIOS = {
 
 
 DEFAULT_MESSAGE = "Я пока не умею обрабатывать такие вопросы. У меня ты можешь узнать когда и где пройдет конференция"
+
+
+DB_CONFIG = dict(
+provider='postgres',user='postgres',password='qwerty67',host='localhost',database='vk_chat_bot'
+)

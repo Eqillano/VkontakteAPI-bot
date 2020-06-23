@@ -9,3 +9,136 @@ Traceback (most recent call last):
 ValueError: неизвестное сообщние
 отправляем сообщение
 мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+ошибка в обработке события
+Traceback (most recent call last):
+  File "bot.py", line 50, in run
+    self.on_event(event)
+  File "bot.py", line 62, in on_event
+    text = event.objects.text
+AttributeError: 'VkBotMessageEvent' object has no attribute 'objects'
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+ошибка в обработке события
+Traceback (most recent call last):
+  File "bot.py", line 50, in run
+    self.on_event(event)
+  File "bot.py", line 69, in on_event
+    if any(token in text for token in intent['token']):
+KeyError: 'token'
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+ошибка в обработке события
+Traceback (most recent call last):
+  File "bot.py", line 50, in run
+    self.on_event(event)
+  File "bot.py", line 77, in on_event
+    text_to_send = settings.DEFAULT_ANSWER
+AttributeError: module 'settings' has no attribute 'DEFAULT_ANSWER'
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+ошибка в обработке события
+Traceback (most recent call last):
+  File "bot.py", line 50, in run
+    self.on_event(event)
+  File "bot.py", line 77, in on_event
+    text_to_send = settings.DEFAULT_ANSWER
+AttributeError: module 'settings' has no attribute 'DEFAULT_ANSWER'
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+ошибка в обработке события
+Traceback (most recent call last):
+  File "bot.py", line 50, in run
+    self.on_event(event)
+  File "bot.py", line 77, in on_event
+    text_to_send = settings.DEFAULT_ANSWER
+AttributeError: module 'settings' has no attribute 'DEFAULT_ANSWER'
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_TYPING_STATE
+мы пока не умеем с таким работать VkBotEventType.MESSAGE_REPLY

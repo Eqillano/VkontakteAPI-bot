@@ -59,64 +59,65 @@ class Bot:
            return
 
         user_id = event.object.peer_id
-        text = event.objects.text
+        text = event.object.text
         if user_id in self.user_states:
-           text_to_send = self.continue_scenario(user_id,text=text)
+           text_to_send = self.continue_scenario(user_id,text)
               # retry current step
         else:
            # search intent
            for intent in settings.INTENTS:
-               if any(token in text for token in intent['token']):
-                  # run intent
+               log.debug('User gets {intent}'.format(intent))
+               #print(intent)
+               if any(token in text for token in intent['tokens']):
+                  # run intenrrt
                   if intent['answer']:
                      text_to_send = intent['answer']
                   else:
-                     self.start_scenario(user_id,intent['scenario'])
+                     text_to_send = self.start_scenario(user_id,intent['scenario'])
                   break
            else:
-               text_to_send = settings.DEFAULT_ANSWER
+               text_to_send = settings.DEFAULT_MESSAGE
 
-          self.api.messages.send(
-          message=event.object['text'],
-          random_id=random.randint(0,2 ** 20),
-          peer_id = user_id)
-       else:
-
-
-   def start_scenario(self,user_id,scenario_name):
-       scenario = settings.SCENARIOS[scenario_name]
-       first_step = scenario['first_step']
-       step = scenario['steps'][first_step]
-       text_to_send = step['text']
-       self.user_states[user_id] = UserState(scenario_name=scenario_name,step_name=first_step)
-       return text_to_send
+        self.api.messages.send(
+           message=text_to_send,
+           random_id=random.randint(0,2 ** 20),
+           peer_id = user_id)
 
 
 
+    def start_scenario(self, intent,  scenario_name, user_id, name_user):
+        scenario = settings.SCENARIOS[scenario_name]
+        first_step = intent['first_step']
+        step = scenario['steps'][first_step]
+        state = UserState(user_id=user_id, scenario_name=scenario_name,
+                          step_name=first_step, context={'name':name_user})
+        self.send_data(state=state, text_to_send=step['text'])
 
 
-   def continue_scenario(self,user_id,text):
-       state = self.user_states[user_id]
-          # continue scenario
-       steps = settings.SCENARIOS[state.scenario_name]['steps']
-       step = steps[state.step_name]
-       handler = getattr(handlers,step['handler'])
-       if handler(text=text,context=state_context):
-             # next step
-          next_step = steps[step['next_step']]
-          text_to_send = next_step['text'].format(**state_context)
-          if next_step['next_step']:
-                # switch to next step
-             state.step_name = next_step['next_step']
-          else:
-                # finish scenario
-             self.user_states.pop(user_id)
+
+
+
+    def continue_scenario(self, text, state):
+        state = self.user_states(user_id)
+        steps = settings.SCENARIOS[state.scenario_name]['steps']
+        step = steps[state.step_name]
+        handler = getattr(handlers, step['handler'])
+        if handler(text=text,context=state.context):
+            #state.step_name = step['next_step']
+            next_step = steps[step['next_step']]
+            text_to_send = next_step['text'].format(**state_context)
+            #self.send_data(state=state, text_to_send=next_step['text'].format(**state.context))
+            if next_step['next_step']:
+                state.step_name = step['next_step']
+            else:
+                #finish scenario
+                #log.info(state.context)
+                self.user.states.pop(user_id)
+
         else:
-            # retry current step
-            text_to_send = step['failure_text'].format(**state_context)
-
-
+            text_to_send = step['failure_text'].format(**state.context)
         return text_to_send
+
 
 
 
